@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    image: nicolaka:latest
+    command: sleep infinity
+    networks:
+      secure_internal_network:
+        aliases:
+          - secure-app
+networks:
+  secure_internal_network:
+    external: true
